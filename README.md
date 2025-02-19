@@ -9,7 +9,7 @@ it works by creating and adding a [Breadcrumb](https://docs.sentry.io/platforms/
 
 > **This is a maintained fork of [ericlewis/swift-log-sentry](https://github.com/ericlewis/swift-log-sentry).**
 >
-> This fork bumped up `sentry-cocoa` to 8.x and targets latest SwiftLog interface. Library name is also updated to `LoggingSentry` to be more in-line with other SwiftLog backends.
+> This fork bumped up `sentry-cocoa` to 8.x, targets latest SwiftLog interface and is now fully compatible with Swift 6 Language Mode. Library name is also updated to `LoggingSentry` to be more in-line with other SwiftLog backends.
 
 ## Features
 
