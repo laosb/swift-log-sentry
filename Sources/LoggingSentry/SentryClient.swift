@@ -1,9 +1,9 @@
 import Sentry
 
-public struct SentryClient {
-  public var addBreadcrumb: (_ crumb: Breadcrumb) -> Void
+public struct SentryClient: Sendable {
+  public var addBreadcrumb: @Sendable (_ crumb: Breadcrumb) -> Void
 
-  public init(addBreadcrumb: @escaping (_ crumb: Breadcrumb) -> Void) {
+  public init(addBreadcrumb: @Sendable @escaping (_ crumb: Breadcrumb) -> Void) {
     self.addBreadcrumb = addBreadcrumb
   }
 }

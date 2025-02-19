@@ -34,5 +34,6 @@ let package = Package(
               .product(name: "Logging", package: "swift-log"),
               .product(name: "Sentry", package: "sentry-cocoa"),
             ]),
-    ]
+    ],
+    swiftLanguageVersions: [.version("6"), .v5]
 )
