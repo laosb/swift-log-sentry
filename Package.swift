@@ -13,24 +13,24 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "SentryLogHandler",
-            targets: ["swift-log-sentry"]),
+            name: "LoggingSentry",
+            targets: ["LoggingSentry"]),
     ],
     dependencies: [
       .package(url: "https://github.com/apple/swift-log.git", from: "1.0.0"),
-      .package(url: "https://github.com/getsentry/sentry-cocoa.git", from: "7.0.0"),
+      .package(url: "https://github.com/getsentry/sentry-cocoa.git", from: "8.0.0"),
     ],
     targets: [
         .target(
-            name: "swift-log-sentry",
+            name: "LoggingSentry",
             dependencies: [
                 .product(name: "Logging", package: "swift-log"),
                 .product(name: "Sentry", package: "sentry-cocoa"),
             ]),
         .testTarget(
-            name: "swift-log-sentryTests",
+            name: "LoggingSentryTests",
             dependencies: [
-              "swift-log-sentry",
+              "LoggingSentry",
               .product(name: "Logging", package: "swift-log"),
               .product(name: "Sentry", package: "sentry-cocoa"),
             ]),
