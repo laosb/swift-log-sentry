@@ -47,6 +47,7 @@ public struct SentryLogHandler: LogHandler {
       data[metadata.key] = metadata.value.description
     }
 
+    crumb.data?["source"] = source
     crumb.data?["file"] = file
     crumb.data?["function"] = function
     crumb.data?["line"] = line
