@@ -15,8 +15,8 @@ public struct SentryLogHandler: LogHandler {
   }
 
   public func log(
-    level: Logger.Level, message: Logger.Message, metadata: Logger.Metadata?, file: String,
-    function: String, line: UInt
+    level: Logger.Level, message: Logger.Message, metadata: Logger.Metadata?, source: String,
+    file: String, function: String, line: UInt
   ) {
     let crumb = Breadcrumb()
 
